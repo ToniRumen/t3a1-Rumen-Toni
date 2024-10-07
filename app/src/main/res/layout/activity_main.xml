@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    -
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/imagen_cupcakes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cupcakes_ejercicio1"
+
+        />
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Cupcakes"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/autor"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <TextView
+        android:id="@+id/autor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Autor"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@id/guideline_horizontal"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Descripción"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal" />
+
+    <TextView
+        android:id="@+id/contenido_descripcion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/contenido_descripcion"
+        app:layout_constraintEnd_toStartOf="@id/guideline_vertical"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descripcion" />
+
+    <TextView
+        android:id="@+id/ingredientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+
+        android:layout_marginTop="8dp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:text="Ingredientes"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical"
+        app:layout_constraintTop_toBottomOf="@id/guideline_horizontal" />
+
+    <TextView
+        android:id="@+id/contenido_ingredientes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+
+        android:text="@string/contenido_ingredientes"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/guideline_vertical"
+
+        app:layout_constraintTop_toBottomOf="@id/ingredientes" />
+
+    <TextView
+        android:id="@+id/receta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:text="Receta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contenido_ingredientes" />
+
+    <TextView
+        android:id="@+id/contenido_receta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginTop="8dp"
+
+        android:layout_marginEnd="16dp"
+        android:text="@string/contenido_receta"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/receta" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
